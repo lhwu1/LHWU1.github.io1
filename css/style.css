@@ -415,3 +415,23 @@ font-size: 25px;
 	color: #dfdfdf;
 	margin-top: 25px;
 }
+/* 好友列表 */
+.haoyou ul {
+	list-style-type: none;
+	padding: 0;
+  }
+
+ .haoyou ul li {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin-bottom: 5px;
+  }
+
+  .haoyou ul li span {
+	width: 20px;
+	height: 20px;
+	background-color: #f0f0f0;
+	display: block;
+  }
