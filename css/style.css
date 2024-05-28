@@ -1,0 +1,417 @@
+@charset "utf-8";
+body,html{ min-width: 1200px; }
+*{ margin:0; padding:0;}
+body,p,h1,h2,h3,h4,h5,table,ul,li,form,input{ margin:0; padding:0; color:#000; font-family:"Microsoft yahei"; }
+
+body,p{ font-size:14px; border:none;}
+a{ font-size:14px; color:#999; text-decoration:none; border:none; padding:0; margin:0;}
+table{border-collapse:collapse;}
+img{ border:0; margin:0; padding:0;}
+ul,li{ list-style:none; border:0; margin:0; padding:0;}
+dl,dt,dd{ margin:0; padding:0; -webkit-margin-start:0;}
+h1,h2,h3,h4,h5{ font-weight:normal; font-size:12px; display:block;}
+strong,b{ font-weight:normal;}
+table,tr,td{ border-spacing:0;}
+em,i,b{ font-style:normal;}
+p{ line-height: 170%; color: #555; font-size: 14px;}
+input{ border: none; background: none; }
+figcaption{ display: block;}
+input:focus{ outline: none; }
+::-webkit-input-placeholder { /* WebKit browsers */ font-size:14px; color: #dfdfdf; } 
+::-ms-input-placeholder { /* Internet Explorer 10+ */ font-size:14px;color: #dfdfdf; } 
+.fl{float:left;}
+.fr{float:right;}
+.clearfix{*zoom:1;} 
+.clearfix:before,.clearfix:after{display:table; line-height:0; content:"";}
+.clearfix:after{clear:both;}
+.w1200{ width: 1200px; margin: 0 auto;}
+
+.top{ height: 90px; background: #ff551d; position: fixed; top: 0; left: 0; right: 0; z-index: 33;}
+.navbar li{ float: left; position: relative; padding: 0 50px;}
+.navbar li>a{ display: block; height: 90px; line-height: 90px; text-align: center;  font-size: 16px; color: #fff;}
+.navbar li dl a{  display: block; width: 90%; margin: 0 auto; height: 40px; line-height:40px; text-align: center; color: #fff; transition: all 0.6s;}
+.top.on .logo img{ transition: all 0.7s;}
+.top.on .logo img{ height: 70px;}
+.top.on .logo{ display: block;  overflow: hidden; height: 70px;}
+.top.on{ height: 70px; animation-name: down; animation-duration: 1s; border-bottom: 1px solid #f5f5f5;}
+.top dl{ position: absolute; top: 90px; background: #333; left: 0; right: 0; display: none; padding: 10px 0;}
+.top dl a:hover{ background: #1070ff; }
+.top.on dl{ top: 70px;}
+.top.on li>a{ height: 70px; line-height: 70px;}
+
+
+
+.search-box{ border-bottom: 1px solid #ffffff; width: 315px; height: 40px; margin-right: 40px; margin-top: 25px;}
+.search-box input[type=text]{ width: 270px; height: 40px; line-height: 40px; color: #fff; font-size: 14px;}
+.search-box input[type=submit]{ width: 40px; height: 40px;  background: url(../img/zoom.png) no-repeat center;}
+.top.on .search-box{ margin-top:10px;}
+
+
+.banner{ position: relative;  width: 100%; height: 800px; overflow: hidden; display: block; margin-top: 90px;}
+.banner .hd li{ display: inline-block; width: 10px; height: 10px; border-radius: 100%; overflow: hidden;
+border:3px solid #fff; margin: 0 5px; z-index: 333; cursor: pointer; transition: all 0.6s;}
+.banner .hd li.on{ background: #fff;}
+.banner .hd{ position: absolute; bottom:30px; text-align: center; width: 100%; height: 10px;}
+.banner .pic li a{ display: block; vertical-align: top; height: 800px;}
+
+
+
+.four-link{ width: 1008px; margin: 0 auto; box-shadow:  0 0 15px rgba(0,0,0,0.1); height: 140px; margin-top: -70px; z-index: 3; background: #fff;
+position: relative;}
+.four-link ul li{ float: left; padding: 0 90px; border-right: 1px solid #ededed;}
+.four-link ul li:last-child{ border-right: none;}
+.four-link ul{ margin-left: 15px; padding-top: 30px;}
+.four-link li p{ text-align: center; font-size: 16px; color: #000; transition: all 0.6s;}
+.four-link li span{ display: block; margin: 0 auto; height: 55px; width: 55px; background: url(../img/icon.png) no-repeat -9px -13px;
+ transition: all 0.6s;}
+ 
+.four-link li:nth-child(2) span{ background-position: -112px -13px}
+.four-link li:nth-child(3) span{ background-position: -206px -13px;}
+.four-link li:nth-child(4) span{ background-position: -300px -13px; width: 45px;}
+.four-link li:nth-child(1):hover span{ background-position: -9px -70px;}
+.four-link li:nth-child(2):hover span{ background-position: -112px -70px;}
+.four-link li:nth-child(3):hover span{ background-position: -206px -70px;}
+.four-link li:nth-child(4):hover span{ background-position: -300px -70px;}
+.four-link li:hover p{ color: #FF551D;}
+
+.title h3{ font-weight: bold; color: #000; text-align: center; font-size: 30px;}
+.title h3 b{ display: block; background: #FF551D; height: 2px; width: 35px; margin:10px auto 20px auto;}
+.title p{ text-align: center; color: #666; font-size: 15px; }
+
+.course{ margin-top: 50px;}
+.course-cont{ margin-top: 50px;}
+.course-left{ width: 180px; height: 435px; background: #F5F5F5;  padding:15px 20px 10px 20px;}
+.course-left li { height: 48px; line-height: 48px; transition: all 0.6s;}
+.course-left li a{ display: block; font-size: 16px; color: #000; transition: all 0.6s; padding: 0 10px;}
+.course-left li.on a,.course-left li:hover a{ background: #ff551d; color: #fff;}
+.course-right{ width: 980px;}
+.course-right li{ float: left; width: 300px; height: 215px; overflow: hidden; position: relative; margin-left: 25px; margin-bottom: 30px;}
+.course-right li span{ display: block; position: absolute; background: url(../img/bg.png) no-repeat top center; background-size: 100% 100%;
+top: 0; right: 0; bottom: 0; left: 0;}
+.course-right li h3{ font-weight: bold; color: #fff; font-size: 20px; text-align: center; white-space: nowrap; overflow: hidden; height:30px;
+text-overflow: ellipsis;}
+.course-right li h5{ display: block; text-align: center; font-size: 16px; color: #fff; white-space: normal; height: 30px; overflow: hidden;
+text-overflow: ellipsis;}
+.course-right li figcaption{ position: absolute;  bottom: 0; left: 0; right: 0; padding: 20px 0 5px 0;}
+.course-right li figure img,.course-right li figure{ display: block; width: 300px; height: 215px; overflow: hidden; transition: all 0.6s;}
+.course-right li:hover figure img{ transform: scale(1.1);}
+
+.hf1{ background: url(../img/hf1.jpg) no-repeat top center; height: 235px; width: 100%; overflow: hidden; background-attachment: fixed;
+margin-top: 30px;}
+.hf1 img{ display: block; margin: 65px auto 0 auto;}
+
+.tutor{ margin-top: 50px;}
+.tutor-cont{ margin-top: 50px;}
+.tutor li{ overflow: hidden;  width: 550px; height: 285px; border:1px solid #F5F5F5; float: left; margin-bottom: 30px; margin-right: 30px;}
+.tutor figure{ float: left; width: 205px; height: 285px; overflow: hidden;}
+.tutor figure img{ display: block; width: 205px; height: 285px; overflow: hidden; transition: all 0.6s;}
+.tutor figcaption{ float: left; width: 320px; margin-left: 20px;}
+.tutor li h3{ background: url(../img/icon.png) no-repeat -230px -168px; padding-left: 25px; font-weight: bold; color: #000; font-size: 20px;
+margin: 30px auto 20px auto; } 
+.tutor li h3 span{ display: inline-block; font-size: 14px; color: #000; font-weight: normal; margin-left: 5px;}
+.tutor li p{ font-size: 14px; line-height: 32px; color: #666; margin-bottom: 20px;}
+.tutor li p i{ display: inline-block; vertical-align: middle; width: 7px; height: 7px; border-radius: 100%; background: #FF551D;
+margin-right: 5px; }
+.tutor li a{ display: inline-block; height: 36px; line-height: 36px; width: 136px; text-align: center; color: #fff; background: #ff551d;
+font-size: 14px; transition: all 0.6s;}
+.tutor li .a2{ background: #1070ff; margin-left: 20px;}
+.tutor li a:hover { transform: translateX(10px);}
+.tutor li:hover figure img{ transform: scale(0.9);}
+.tutor .more{ display: block;  background: url(../img/icon.png) no-repeat -13px -251px; height: 45px; width: 203px; text-align: center; color: #fff; font-size: 16px;line-height: 45px;
+margin: 20px auto; transition: all 0.6s;}
+.tutor .more:hover{ background-position: -13px -312px;}
+
+.quality{ background: url(../img/bg2.jpg) no-repeat top center; padding: 50px 0; margin-top: 50px;}
+.quality .title h3{ color: #fff;}
+.quality .title p{ color: #e8e8e8;}
+.quality .list{ display: none;}
+.qua-cont1{ margin-top: 40px;}
+.qua-cont1 li{ width: 340px; height: 440px; border:4px solid #555555; margin: 0 20px; transition: all 1s;}
+.qua-cont1 li span{ display: block; text-align: center; margin: 0 auto; font-family: impact; font-size: 40px; padding: 35px 0 25px 0;}
+.qua-cont1 figure{ display: block; margin: 0 auto;}
+.qua-cont1 figure img{ display: block; margin: 0 auto; width: 165px; height: 230px; overflow: hidden; transition: all 0.6s;}
+.qua-cont1 .p1{ text-align: center; color: #fff; font-weight: bold; font-size: 20px; text-align: center; margin-top: 20px;}
+.qua-cont1 .p2{ text-align: center; color: #fff; font-size: 14px; text-align: center; opacity: 0.38; font-family: verdana;}
+.qua-cont1 li:hover{ border-color: #ff551d;}
+.qua-cont2 { margin-top: 50px;}
+.qua-cont2 li{ background: #fff; width: 350px; height: 220px; overflow: hidden; margin: 0 20px;}
+.qua-cont2 li figure img{ display: block; width: 160px; height: 160px; overflow: hidden; transition: all 0.6s;}
+.qua-cont2 li figure{ display: block; margin: 10px auto 5px auto; height: 160px; width: 160px;}
+.qua-cont2 li p{ text-align: center; color: #000; font-size: 16px; transition: all 0.6s;}
+.qua-cont2 h3 span{ font-size: 24px; color: #FF551D;}
+.qua-cont2 h3 b{ color: #fff; opacity: 0.6; font-size: 14px; display: inline-block; margin-left: 20px;}
+.qua-cont2 h3 { padding-left: 20px; padding-bottom: 25px;}
+.qua-cont2 li:hover figure img{ opacity: 0.6;}
+.qua-cont2 li:hover p{ color: #FF551D;}
+
+.student{ margin-top: 50px;}
+.student-cont{ margin-top: 50px; position: relative;}
+.student-cont figcaption{ padding: 70px;}
+.student-cont figcaption p{ line-height: 36px; color: #666; font-size: 16px;}
+.student-cont strong{ font-size: 34px; font-weight: bold; color: #000; margin-bottom: 20px; display: block;}
+.student-cont .bigImg{ height: 440px !important; background: #F5F5F5; width: 910px; margin: 0 auto 50px auto;}
+.student-cont .bigImg figcaption{ float: left;}
+.student-cont .bigImg figure{ float: right;}
+.student-cont .smallScroll li{ width: 255px; height: 255px; overflow: hidden; margin: 0 20px; position: relative;}
+.student-cont .smallScroll li img{ width: 255px; height: 255px; overflow: hidden; transition: all 1s;}
+.student-cont .more{ display: block; background: url(../img/icon.png) no-repeat -13px -312px;  height: 45px; width: 203px;
+font-size: 18px; color: #fff; text-align: center; transition: all 0.6s; line-height: 45px; margin-top: 50px;}
+.student-cont .more:hover{ transform: translateX(10px);}
+.student-cont .smallImg li.on b{ opacity: 0.6;}
+.student-cont .smallImg li b{ position: absolute; top: 0; left: 0; right: 0; background: #FF551D; opacity: 0; display: block; bottom: 0;
+transition: all 0.6s; }
+.student-cont .sPrev{ display: block; position: absolute; left: 40px; top:225px; background: url(../img/icon.png) no-repeat -15px -139px;
+height: 40px; width: 48px; transition: all 1s;}
+.student-cont .sNext{ display: block; position: absolute; right: 40px; top:225px; background: url(../img/icon.png) no-repeat -128px -139px;
+height: 40px; width: 48px; transition: all 1s;}
+.student-cont .sPrev:hover{ background-position: -15px -191px;}
+.student-cont .sNext:hover{ background-position: -128px -191px;}
+
+.hf2{ background: url(../img/hf2.png) no-repeat top center; width: 100%; height: 376px; margin-top: 30px;}
+.hf2 h3{ font-weight: bold; color: #fff; font-size: 20px; padding-top: 270px; text-align: right; padding-right: 240px;}
+.hf2 .div1{ background: #fff; width: 290px; text-align: left; height: 27px; line-height: 27px; float: right;  margin-right: 240px;
+margin-top: 20px; transition: all 1s;}
+.hf2 .div1 i,.hf2 .div1 span{height: 27px; line-height: 27px; float: left; color: #1070ff;}
+.hf2 .div1 i{ padding-left: 10px;}
+.hf2 .div1:hover{ transform: translateX(10px);}
+
+.about{ margin-top: 50px;}
+.about-cont{ margin-top: 40px;}
+.about li{ float: left;}
+.about .p1,.about .p2{ text-indent: 2em; font-size: 16px; line-height: 36px; color: #000;}
+.about .p2{ margin-top: 10px;}
+.about figure{ position: relative; width: 100%; overflow: hidden; height: 226px; margin-top: 30px;}
+.about figure img{ display: block; height: 226px; width: 100%; overflow: hidden; transition: all 1s;}
+.about figure a{ display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+line-height:226px; color: #fff; text-align: center; transition: all 0.6s; font-size: 16px; opacity: 0; background: rgba(255,85,29,0.3);}
+.about figure:hover img{ transform: scale(1.1);}
+.about figure:hover a{ opacity: 1;}
+.about ul{ width: 1145px; margin:40px auto 0 auto;}
+.about li p{ text-align: center; color: #000; font-size: 16px; padding: 12px 0;}
+.about li span{ display: block; font-family: symbol; color: #000; font-size: 60px; text-align: center;}
+.about li{ padding: 0 45px; transition: all 1s;}
+.about li:hover{ transform: translateY(10px);}
+
+.hf3{ margin: 50px 0; width: 100%; overflow: hidden; background: url(../img/hf3.jpg) no-repeat top center; height: 230px;}
+.hf3 p{ text-align: center; color: #fff; opacity: 0.45;  font-size: 18px; padding-top: 130px;}
+
+.news-cont{ margin-top: 50px;}
+.news-cont li{ float: left; width: 370px; transition: all 0.5s;}
+.news-cont li figure,.news-cont li figure img{ display: block; width: 370px; height: 265px; overflow: hidden; transition: all 1s;}
+.news-cont li:nth-child(2){ margin: 0 45px;}
+.news-cont li:hover img{ transform: scale(1.1);}
+.news-cont .time span{ font-weight: bold; color: #FF551D; font-size: 62px; float: left;}
+.news-cont .time strong{ display: block; float: left; line-height: 20px; color: #999; font-size: 14px; margin-left: 20px;
+margin-top: 25px;}
+.news-cont .time b{ display: block; float: left; height: 1px; background: #FF551D; width: 40px; margin-top: 45px; margin-left:20px;
+transition: all 1s;}
+.news-cont li:hover{ transform: translateY(-10px);}
+.news-cont li:hover b{ width: 100px;}
+.news-cont  figcaption{ padding-top: 20px;}
+.news-cont  h3{ font-weight: bold; color: #000; font-size: 16px; margin-bottom: 20px;}
+.news-cont figcaption p{ line-height: 22px; height: 66px; overflow: hidden; color: #666; font-size: 14px;}
+
+
+.partner{ margin-top: 50px; margin-bottom: 35px;}
+.part{ margin-top: 40px;}
+.part1 .bd{ margin-right: -37px;}
+.part1 .bd li{ width: 270px; height: 190px; overflow: hidden; position: relative; margin-right: 37px;}
+.part1 .bd li img{ display: block; width: 270px; height: 190px; transition: all 0.6s; overflow: hidden;}
+.part1 .bd li:hover img{ transform: scale(1.1);}
+.part1 .bd p{ position: absolute; line-height: 190px; height: 190px; left: 0; right: 0; top: 0; bottom: 0;background: rgba(255,85,29,0.7);
+font-size: 20px; color: #fff; font-weight: bold; text-align: center; opacity: 0; transition: all 0.6s;}
+.part1 .bd li:hover p{ opacity: 1;}
+.part{ display: none;}
+.part.on{ display: block;}
+.partner-tit .hd ul{ float: left;}
+.partner-tit .hd li{ float: left; width: 100px; font-weight: bold; color: #000; font-size: 20px; height:50px; line-height: 50px; text-align: center;
+margin-right: 40px; cursor: pointer;}
+.partner-tit{ border-bottom: 1px solid #F5F5F5;}
+.partner-tit .more{ float: right; font-size: 16px; color: #333;  height: 50px; line-height: 50px; display: block;}
+.partner-tit .hd li.on{ border-bottom: 2px solid #FF551D;}
+
+.part2 ul{ margin-right: -15px;}
+.part2 li{ float: left; width: 187px; height: 84px; border:1px solid #F5F5F5; border-radius: 5px; transition: all 0.6s;
+margin-right: 13px; margin-bottom: 15px; overflow: hidden;}
+.part2 li:hover{ border-color: #FF551D;}
+.part2 li img{ display: block; width: 187px; height: 84px; overflow: hidden; }
+
+.footer{ background: #1f1f23; padding: 50px 0 0 0; }
+.footer h3{ border-top: 1px solid #47474b; border-bottom: 1px solid #47474B; width: 350px; color: #fff; font-weight: bold;  font-size: 18px;
+padding: 15px 0; margin-bottom: 35px;}
+.footer .div{ float: left;}
+.footer .div1{ margin-right: -80px;}
+.footer p a{ display: inline-block; color: #b3b3b3; font-size: 14px; margin-right: 80px; transition: all 0.7s;
+margin-bottom: 20px;}
+.footer p a:hover{ color: #FF551D; transform: translateX(5px);}
+.footer .div2 span{ color: #FF551D; font-size: 14px; display: inline-block;}
+.footer .div2 p{ line-height: 40px; color: #B3B3B3; font-size: 14px;}
+.footer .div2 strong{  font-size: 20px;}
+.footer .div2 { margin: 0 85px;}
+.footer .div3 .code{ width: 108px; }
+.footer .div3 p{ color: #B3B3B3; font-size: 14px; text-align: center;}
+
+.copyright{ border-top: 1px solid #47474B; margin-top: 45px;}
+.copyright p{ font-size: 14px; height: 50px; line-height: 50px; color: #B3B3B3;}
+
+.neibanner{ background: url(../img/剧本杀主页面横页.jpg) no-repeat top center; background-attachment: fixed; height: 400px; margin-top: 90px;}
+.neibanner .w1200{ position: relative;}
+.neibanner-text{ position: absolute; left: 0;  right: 0;}
+.neibanner-text h3{ font-weight: bold; color: #fff; text-align: center; font-size: 50px; padding-top: 85px; padding-bottom: 40px;}
+.neibanner-text h3 span{ font-family: arial; font-size: 26px; font-weight: normal;}
+.neibanner-text p{ text-align: center;}
+.neibanner-text p a{ display:inline-block;  color: #333; font-size: 14px; padding: 0 30px; background: #fff;
+height: 40px; line-height: 40px; border-radius: 5px; margin: 0 20px 20px 20px;transition: all 0.6s;}
+.neibanner-text a.on,.neibanner-text a:hover{ background: #FF551D; color: #fff;}
+
+.neipage{ background: #F5F5F5; padding: 50px 0;}
+.course-page li{ background: #fff; margin-bottom: 20px; overflow: hidden; clear: both; padding: 20px; transition: all 1s;}
+.course-page figure{ float: left; width: 300px; height: 215px; overflow: hidden;}
+.course-page figure img{ width: 300px; height: 215px; overflow: hidden; transition: all 0.6s;}
+.course-page li:hover figure img{ transform: scale(1.1);}
+.course-page figcaption{ float: left; padding-left: 20px; width: 840px;}
+.course-page li h3{ font-weight: bold; color: #000; font-size: 18px; padding: 10px 0 15px 0; overflow: hidden; text-overflow: ellipsis;
+white-space: normal;}
+.course-page li strong{ font-weight: bold; color: #666; font-size: 14px; display: block; overflow: hidden; text-overflow: ellipsis;
+white-space: normal; }
+.course-page li p{ font-size: 14px; color: #999; padding: 7px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.course-page .xq,.course-page .bm{ display: inline-block; height:34px; line-height: 34px; text-align: center; font-size: 14px;
+background: #ff551d; color: #fff; width: 120px; margin-top: 5px; transition: all 1s;}
+.course-page .bm{ margin-left: 20px; background: #1070FF;}
+.course-page li a:hover{ transform: translateX(10px);}
+.course-page li:hover{ box-shadow: 0 0 20px rgba(0,0,0,0.1); transform: translateX(10px);}
+
+
+.fenye{ text-align: center;  padding:30px 0 0 0 }
+.fenye a{ display: inline-block;  padding: 0 20px; height: 40px; border:1px solid #eee; background: #fff;
+color: #555; line-height: 40px; text-align: center; transition: all 1s; margin:0 5px; }
+.fenye span{ display: inline-block;  padding: 0 20px; height: 40px; border:1px solid #eee; background: #ff551d; color: #fff; cursor: pointer; line-height: 40px; text-align: center; transition: all 1s; margin:0 5px; }
+.fenye a:hover,.fenye a.on{ background: #ff551d; color: #fff; cursor: pointer; }
+
+.news-top a{ padding: 15px;  background: #fff; display: block;}
+.news-top figure{ display: block; width: 100%; height: 230px; overflow: hidden;}
+.news-top img{ display: block; width: 100%; height: 230px; overflow: hidden; transition: all 1s;}
+.news-top div{ width: 580px;}
+.news-top h3{ font-weight: bold; color: #FF551D; font-size: 18px; padding: 15px 0 5px 0;}
+.news-top p{ font-size: 14px; color: #666; line-height: 32px;}
+.news-top div:hover img{ transform: scale(1.1); }
+
+.news-page li{ transition: all 1s;}
+.news-page ul{ padding: 20px 30px; background: #fff; margin-top: 40px; margin-bottom: 25px;}
+.news-page li a{ display: block; overflow: hidden; clear: both;  padding:15px 0; border-bottom: 1px dashed #F5F5F5;}
+.news-page li span{ color: #fff; height: 24px; line-height: 24px; width:40px; border-radius:5px; font-size: 12px; background: #FF551D; float: left;
+text-align: center; margin-top: 8px;}
+.news-page li strong{ color: #666;  font-size: 14px; display: block; float: left; height: 40px; line-height: 40px;
+margin: 0 30px;}
+.news-page li p{ color: #000;  font-size: 14px; float: left; display: block; width: 800px; height: 40px; line-height: 40px; 
+overflow: hidden; text-overflow: ellipsis; white-space: nowrap; transition: all 1s; font-weight: normal;}
+.news-page li b{ color: #999;  font-size: 14px; float: right; height: 40px; line-height: 40px; display: block;}
+.news-page li:hover{ transform: translateX(10px);}
+.news-page li:hover p{ color: #FF551D; }
+
+
+/*详情页面*/
+.detailpage{ padding: 20px 20px 50px 20px; background: #fff; }
+.stace h1{ font-size:24px; font-weight:bold; line-height:36px; overflow:hidden; padding-top:20px;}
+.stace strong{ display:block; overflow:hidden; padding:20px 0; overflow:hidden; margin-bottom:20px; border-bottom:1px #e0e0e0 solid;}
+.stace strong span{ display:inline-block; color:#999; padding-right:30px;}
+.stace .cont{ width:100%; overflow:hidden;}
+.stace .cont p{ color:#333; line-height:34px; margin-top:15px; text-indent: 2em;}
+.stace .cont img{ display:block; max-width:100%; margin: auto;}
+.stace .zjlj{ width:100%; overflow:hidden; margin-top:60px; border:1px #e0e0e0 solid; border-left:none; border-right:none; line-height:60px; position:relative;}
+.stace .zjlj a{ display:block; width:48%; float:left; overflow:hidden; color:#666; text-overflow:ellipsis; white-space:nowrap; font-size:12px;
+transition: all 0.6s;}
+.stace .zjlj a:nth-child(1){ text-align:left;}
+.stace .zjlj a:nth-child(2){ text-align:right; float: right;}
+.stace .zjlj a i{ color:#000;}
+.stace .zjlj a:hover{ color: #FF551D;}
+.detail-left{ width: 830px;}
+.detail-right{ width:300px;}
+
+.tade .zxsj{  position:relative; z-index:10;  }
+.tade .zxsj input.text{ width:288px; color:#555; padding-left: 10px; 
+line-height:40px; height:40px; border:1px solid #E0E0E0; background:#fff; margin-top:15px; border-radius:4px;}
+.tade .zxsj input.sub{ border:none; width:100%; line-height:43px; height:43px; background:#fff; color:#fff;
+ font-size:16px; margin-top:15px; border-radius:4px; cursor:pointer; background: #FF551D;}
+.tade .zxsj p{ color:#fff; font-size:12px; text-align:center; margin-top:8px;}
+
+.tade .ming{ width:100%; height:36px; line-height:36px; border-bottom:1px #e0e0e0 solid; margin-top:20px;}
+.tade .ming h1{ float:left; height:36px; border-bottom:1px #FF551D solid; font-size:16px;}
+.tade .ming a{ color:#FF551D; float:right;}
+.tade .rmal{ width:100%; overflow:hidden;}
+.tade .rmal a{ display:block; width:100%; overflow:hidden; margin-top:15px;}
+.tade .rmal a em{ display:block; overflow:hidden;}
+.tade .rmal a em img{ display:block; width:100%; -webkit-transition:all 0.4s linear;
+height: 200px; -moz-transition:all 0.4s linear; -o-transition:all 0.4s linear; transition:all 0.4s linear;}
+.tade .rmal a:hover em img{ -webkit-transform:scale(1.1); -moz-transform:scale(1.1); -ms-transform:scale(1.1); -o-transform:scale(1.1); transform:scale(1.1);}
+.tade .rmal a h1{ font-size: 14px; color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+margin: 15px 0;}
+
+
+.teacher-page li{ width: 350px; background: #fff;  border:1px solid #F5F5F5; float: left;
+margin-left: 25px; margin-bottom: 25px; padding:15px; transition: all 1s;}
+.teacher-page ul{ margin-left: -30px;}
+.teacher-page li figure{ display: block; width: 100%; overflow: hidden; height: 285px; margin-bottom: 20px;}
+.teacher-page li img{ display: block; margin: 0 auto; transition: all 0.6s; height: 285px; width: 100%;}
+.teacher-page li h3{ background: url(../img/icon.png) no-repeat -230px -168px; padding-left: 25px; 
+font-weight: bold; color: #000; font-size: 20px; margin: 10px auto; } 
+.teacher-page li h3 span{ display: inline-block; font-size: 14px; color: #000; font-weight: normal; margin-left: 5px;}
+.teacher-page li p{ font-size: 14px; line-height: 32px; color: #666; }
+.teacher-page li p i{ display: inline-block; vertical-align: middle; width: 7px; height: 7px; border-radius: 100%; background: #FF551D;
+margin-right: 5px; }
+.teacher-page li:hover figure img{ transform: scale(1.1);}
+.teacher-page li figcaption{ padding: 0 20px;}
+.teacher-page li:hover{ box-shadow: 0 0 15px rgba(0,0,0,0.2);}
+
+
+/*联系我们*/
+
+.contact-page h2{ font-size: 26px; color: #333; font-weight: bold; border-bottom: 1px solid #F5F5F5; padding-bottom: 20px;}
+.contact-page .div1 {width: 360px; float: left; margin-top: 50px; padding-right: 40px;}
+.contact-page .div1 div.fl{ width: 300px; padding-left: 10px;}
+.contact-page .div1 span{ display: block;  background: url(../img/contact.png) no-repeat; width: 45px; height: 45px;}
+.contact-page .div1 p{ line-height: 30px;}
+.contact-page .div1 .span1{ background-position:-8px -5px;}
+.contact-page .div1 .span2{ background-position:-8px -60px;}
+.contact-page .div1 .span3{ background-position:-8px -114px ;}
+.contact-page .div1 .span4{ background-position:-6px -160px;}
+.contact-page .div1 .span5{ background-position:-7px -213px;}
+.contact-page .div1 h3{ font-size: 18px; color: #222; height: 30px; }
+.contact-page .div1 p{ font-size: 14px; padding-top: 10px; }
+.contact-page .div1 a{  border:1px solid #eee; font-size: 14px; color: #333; display: block;
+width: 150px; height: 40px; border-radius: 5px; text-align: center; line-height: 40px; transition: all 0.36s;}
+.contact-page .div1 a i{ display: inline-block; background: url(../img/qq_g.png) no-repeat center;  width: 18px; height: 18px; vertical-align: middle;
+margin-right: 10px; transition: all 0.36s;}
+.contact-page .div1 a:hover i{ background-image: url(../img/qq_w.png);}
+.contact-page .div1 a:hover{ background: #FF551D; color: #fff;}
+
+.map{ width: 100%; overflow: hidden; padding: 20px 0;}
+@keyframes down{
+ 	from{transform: translateY(-100%); opacity: 0;}
+ 	to{transform: none; opacity: 1;}
+ }
+
+@media screen and (max-width:1400px) {
+	.top .search-box{ display: none;}
+	.top .navbar li{ padding: 0 45px;}
+}
+/* 补充 */
+/* 主页面登录注册 */
+.z2{
+font-size: 40px;
+}
+.z1{
+font-size: 25px;
+}
+/* 搜索 */
+.kuang{
+	opacity: 0.7;
+	border: 4px solid white;
+	width: 140px;
+	height: 25px;
+	text-align: right;
+	border-radius: 20px;
+	float: right;
+	color: #dfdfdf;
+	margin-top: 25px;
+}
